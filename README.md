@@ -2,6 +2,10 @@
 
 In the project directory, you can run:
 
+### `npm run lint`
+
+Please run this before pushing to the repo. It will remove any formatting errors and make code easier for everyone to read.
+
 ### `npm start`
 
 Runs the app in the development mode.\

@@ -1,3 +1,30 @@
+.involvement {
+  display: flex;
+  width: 1440px;
+}
+
+.involvementImage {
+  max-width: 100%;
+  height: auto;
+}
+
+.involvementText {
+  padding-top: 125px;
+  padding-left: 40px;
+  color: #3D3B3B;
+  font-family: 'Lato', sans-serif;
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+  }
+  p {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .involvementButton {
+
+  }
+}
 // @mixin general {
 //   color: '#3D3B3B';
 //   font-family: 'Times New Roman', Times, serif;

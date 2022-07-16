@@ -1,11 +1,11 @@
-import Involvement from '../../components/Involvement/Involvement';
+import Involvement from "../../components/Involvement/Involvement";
 
 function Home() {
-  return(
-    <div className='home'>
+  return (
+    <div className="home">
       <Involvement />
     </div>
-  )
+  );
 }
 
 export default Home;

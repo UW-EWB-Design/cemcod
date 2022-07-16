@@ -32,4 +32,10 @@
     font-size: 30px;
     font-weight: 700;
   }
+  button:hover {
+    background-color: #c3e8d6;
+  }
+  button:focus {
+    background-color: #a7dbc2;
+  }
 }

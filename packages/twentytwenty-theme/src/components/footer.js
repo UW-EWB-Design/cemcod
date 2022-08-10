@@ -34,7 +34,6 @@ const Footer = ({ state }) => {
             &copy; {currentYear}{" "}
             <Link link={state.frontity.url}>{state.frontity.title}</Link>
           </Copyright>
-          <PoweredBy>Powered by Frontity</PoweredBy>
         </Credits>
         <BackToTop />
       </SiteFooterInner>
@@ -83,15 +82,5 @@ const Copyright = styled.p`
 
   @media (min-width: 700px) {
     font-weight: 700;
-  }
-`;
-
-const PoweredBy = styled.p`
-  color: #6d6d6d;
-  display: none;
-  margin: 0 0 0 2.4rem;
-
-  @media (min-width: 700px) {
-    display: block;
   }
 `;

@@ -4,6 +4,7 @@ import Footer from "./footer";
 import globalStyles from "./styles/global-styles";
 import FontFaces from "./styles/font-faces";
 import Header from "./header";
+import Whatwedo from "./home/whatwedo";
 import Archive from "./archive";
 import Loading from "./loading";
 import Post from "./post";
@@ -34,24 +35,16 @@ const Theme = ({ state }) => {
         <html lang="en" />
       </Head>
 
-      {/* Accessibility: Provides ability to skip to main content */}
-      <SkipLink as="a" href="#main">
-        Skip to main content
-      </SkipLink>
-
       <div style={{ minHeight: "calc(100vh - 190px)" }}>
         {/* Add the header of the site. */}
         <Header />
-
+        <Whatwedo />
+        
         {/* Add the main section. It renders a different component depending
         on the type of URL we are in. */}
         <Main id="main">
           <Switch>
-            <Loading when={data.isFetching} />
-            <SearchResults when={data.isSearch} />
-            <Archive when={data.isArchive} />
-            <Post when={data.isPostType} />
-            <PageError when={data.isError} />
+
           </Switch>
         </Main>
       </div>

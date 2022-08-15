@@ -3,8 +3,7 @@ const settings = {
   "state": {
     "frontity": {
       "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
+      "title": "CEMCOD"
     }
   },
   "packages": [
@@ -18,16 +17,16 @@ const settings = {
               "/"
             ],
             [
-              "Nature",
-              "/category/nature/"
+              "Our Work",
+              "/our-work"
             ],
             [
-              "Travel",
-              "/category/travel/"
+              "News & Updates",
+              "/news"
             ],
             [
-              "Japan",
-              "/tag/japan/"
+              "Success Stories",
+              "/stories"
             ],
             [
               "About Us",

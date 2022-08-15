@@ -1,11 +1,11 @@
 import { connect, styled } from "frontity";
 import Link from "./link";
+import { Button } from "reactstrap"
 import Navigation from "./navigation/navigation";
-import SearchButton from "./search/search-button";
-import SearchModal from "./search/search-modal";
 import MobileSearchButton from "./mobile/search-button";
 import MobileMenuButton from "./mobile/menu-button";
 import MobileMenuModal from "./mobile/menu-modal";
+import logo from "../imgs/navbar/cemcodLogo.png"
 
 const Header = ({ state }) => {
   const { title, description } = state.frontity;
@@ -15,15 +15,9 @@ const Header = ({ state }) => {
     <PageHeader bg={headerBg} id="site-header">
       <HeaderInner>
         <TitleWrapper>
-          {/* Search button on mobile */}
-          {state.theme.showSearchInHeader && <MobileSearchButton />}
-
           {/* Heading and Description of the site */}
           <TitleGroup>
-            <SiteTitle>
-              <StyledLink link="/">{title}</StyledLink>
-            </SiteTitle>
-            <SiteDescription>{description}</SiteDescription>
+            <img style={{ height: "4rem" }} src={logo}></img>
           </TitleGroup>
 
           {/* Mobile menu button and modal */}
@@ -34,12 +28,23 @@ const Header = ({ state }) => {
         <HeaderNavigationWrapper>
           {/* Desktop navigation links */}
           <Navigation />
-          {/* Desktop search button */}
-          {state.theme.showSearchInHeader && <SearchButton />}
+
+          <div style={{ paddingLeft: "2em" }}>
+            <Button
+              style={{ backgroundColor: "#2BB673" }}
+              size="lg"
+            >
+              GET INVOLVED
+            </Button>
+            <Button
+              style={{ backgroundColor: "#1CA99F" }}
+              size="lg"
+            >
+              DONATE
+            </Button>
+          </div>
         </HeaderNavigationWrapper>
       </HeaderInner>
-      {/* Global search modal */}
-      <SearchModal />
     </PageHeader>
   );
 };
@@ -60,7 +65,6 @@ const TitleGroup = styled.div`
 const TitleWrapper = styled.div`
   align-items: center;
   display: flex;
-  justify-content: center;
   padding: 0 4rem;
   text-align: center;
   width: 100%;
@@ -78,6 +82,7 @@ const PageHeader = styled.header`
   z-index: 1;
   background: ${(props) => props.bg};
   position: relative;
+  border-style: none none solid none;
 `;
 
 const HeaderInner = styled.div`

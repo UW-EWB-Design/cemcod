@@ -1,5 +1,4 @@
 import Theme from "./components";
-import "bootstrap/dist/css/bootstrap.min.css";
 import image from "@frontity/html2react/processors/image";
 import link from "@frontity/html2react/processors/link";
 

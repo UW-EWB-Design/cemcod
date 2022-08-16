@@ -2,7 +2,6 @@ import { connect, Global, Head, styled } from "frontity";
 import Switch from "@frontity/components/switch";
 import Footer from "./footer";
 import globalStyles from "./styles/global-styles";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import FontFaces from "./styles/font-faces";
 import Header from "./header";
 import Whatwedo from "./home/whatwedo";
@@ -33,10 +32,6 @@ const Theme = ({ state }) => {
       <Head>
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-        />
       </Head>
 
       <div style={{ minHeight: "calc(100vh - 190px)" }}>

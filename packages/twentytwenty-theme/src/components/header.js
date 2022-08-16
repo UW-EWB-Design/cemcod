@@ -1,6 +1,5 @@
 import { connect, styled } from "frontity";
 import Link from "./link";
-import { Button } from "reactstrap"
 import Navigation from "./navigation/navigation";
 import MobileSearchButton from "./mobile/search-button";
 import MobileMenuButton from "./mobile/menu-button";
@@ -30,6 +29,7 @@ const Header = ({ state }) => {
           <Navigation />
 
           <div style={{ paddingLeft: "2em" }}>
+            { /*
             <Button
               style={{ backgroundColor: "#2BB673" }}
               size="lg"
@@ -41,7 +41,8 @@ const Header = ({ state }) => {
               size="lg"
             >
               DONATE
-            </Button>
+            </Button> */
+            }
           </div>
         </HeaderNavigationWrapper>
       </HeaderInner>

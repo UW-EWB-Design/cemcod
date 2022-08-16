@@ -29,7 +29,6 @@ const Header = ({ state }) => {
           <Navigation />
 
           <div style={{ paddingLeft: "2em" }}>
-            { /*
             <Button
               style={{ backgroundColor: "#2BB673" }}
               size="lg"
@@ -41,8 +40,7 @@ const Header = ({ state }) => {
               size="lg"
             >
               DONATE
-            </Button> */
-            }
+            </Button>
           </div>
         </HeaderNavigationWrapper>
       </HeaderInner>
@@ -57,9 +55,10 @@ const TitleGroup = styled.div`
   @media (min-width: 1000px) {
     align-items: baseline;
     display: flex;
+    align-content: center;
     flex-wrap: wrap;
+    height: 4rem;
     justify-content: flex-start;
-    margin: -1rem 0 0 -2.4rem;
   }
 `;
 
@@ -83,14 +82,14 @@ const PageHeader = styled.header`
   z-index: 1;
   background: ${(props) => props.bg};
   position: relative;
-  border-style: none none solid none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 `;
 
 const HeaderInner = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 2.8rem 0;
+  padding: 0.8rem 0;
   max-width: 168rem;
   z-index: 100;
   margin-left: auto;

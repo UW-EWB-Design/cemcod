@@ -2,7 +2,7 @@ import { styled, connect } from "frontity";
 import EdgeContainer from "../styles/edge-container";
 import involvementImg from "../../imgs/home/involvement.png"
 
-const getinvolved = ({ state }) => {
+const getinvolved = () => {
   return (
     <OuterContainer>
       <img src={involvementImg} />

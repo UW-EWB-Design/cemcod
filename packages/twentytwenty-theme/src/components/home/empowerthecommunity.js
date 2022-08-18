@@ -1,9 +1,8 @@
 import { styled, connect } from "frontity";
 import EdgeContainer from "../styles/edge-container";
-import SectionContainer from "../styles/section-container";
 import empowerImg from "../../imgs/home/empower.png";
 
-const empowerthecommunity = ({ state }) => {
+const empowerthecommunity = () => {
   return (
     <CenteredColumnContainer style={{ flexDirection: "column" }}>
       <h1>Empower The Community</h1>
@@ -23,6 +22,8 @@ const CenteredColumnContainer = styled(EdgeContainer)`
   background-image: url(${empowerImg});
   background-size: cover;
   width: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 
   button {
     margin-bottom: 4rem;

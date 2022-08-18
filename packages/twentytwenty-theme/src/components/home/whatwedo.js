@@ -46,14 +46,14 @@ const whatwedo = ({ state }) => {
 
 export default connect(whatwedo);
 
-export const CenteredRowContainer = styled(SectionContainer)`
+const CenteredRowContainer = styled(SectionContainer)`
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 `;
 
-export const ImgCards = styled(SectionContainer)`
+const ImgCards = styled(SectionContainer)`
   display: flex;
   justify-content: center;
   align-items: center;

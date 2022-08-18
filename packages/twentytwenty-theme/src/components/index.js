@@ -5,6 +5,7 @@ import globalStyles from "./styles/global-styles";
 import FontFaces from "./styles/font-faces";
 import Header from "./header";
 import Whatwedo from "./home/whatwedo";
+import Getinvolved from "./home/getinvolved";
 import Archive from "./archive";
 import Loading from "./loading";
 import Post from "./post";
@@ -37,6 +38,7 @@ const Theme = ({ state }) => {
       <div style={{ minHeight: "calc(100vh - 190px)" }}>
         {/* Add the header of the site. */}
         <Header />
+        <Getinvolved />
         <Whatwedo />
         
         {/* Add the main section. It renders a different component depending

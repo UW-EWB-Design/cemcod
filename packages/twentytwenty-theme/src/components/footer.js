@@ -1,6 +1,9 @@
 import { styled, connect } from "frontity";
 import Link from "./link";
 import SectionContainer from "./styles/section-container";
+import twitterImg from "../imgs/home/twitter.png";
+import fbImg from "../imgs/home/fb.png";
+import {imgCon, ImgCards, CenteredRowContainer} from "./home/whatwedo.js"
 
 // Component that provides scroll to top functionality
 const BackToTop = () => {
@@ -14,10 +17,9 @@ const BackToTop = () => {
 
   return (
     <a href="#site-header" onClick={scrollToTop} style={{ cursor: "pointer" }}>
-      <span style={{ marginRight: 8 }}>To the top</span>
-      <span className="arrow" aria-hidden="true">
-        ↑
-      </span>
+      <CenteredRowContainer style={{ flexDirection: "row" }}>
+        <span style={{ marginLeft: 0 }}>KEEP UP WITH OUR LIVE EVENTS AND INITIATIVES AT CEMCOD_MEDIA ON YOUTUBE</span>
+      </CenteredRowContainer>
     </a>
   );
 };
@@ -31,12 +33,17 @@ const Footer = ({ state }) => {
       <SiteFooterInner>
         <Credits>
           <Copyright>
-            &copy; {currentYear}{" "}
-            <Link link={state.frontity.url}>{state.frontity.title}</Link>
+            <CenteredRowContainer style={{ flexDirection: "row" }}>
+              FOLLOW US
+            </CenteredRowContainer>
           </Copyright>
         </Credits>
         <BackToTop />
       </SiteFooterInner>
+      <CenteredRowContainer style={{ flexDirection: "row" }}>
+        {imgCon("","",fbImg)}
+        {imgCon("","",twitterImg)}
+      </CenteredRowContainer>
     </SiteFooter>
   );
 };
@@ -71,14 +78,15 @@ const SiteFooter = styled.footer`
 `;
 
 const Credits = styled.div`
-  @media (min-width: 700px) {
+  @media (min-width: 1054) {
     display: flex;
   }
 `;
 
 const Copyright = styled.p`
-  font-weight: 600;
   margin: 0;
+  width: 246;
+  height: 58;
 
   @media (min-width: 700px) {
     font-weight: 700;

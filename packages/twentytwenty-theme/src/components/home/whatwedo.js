@@ -4,7 +4,7 @@ import missionImg from "../../imgs/home/mission.png"
 import visionImg from "../../imgs/home/vision.png"
 import goalImg from "../../imgs/home/goal.png"
 
-const imgCon = (title, paragraph, img) => (
+export const imgCon = (title, paragraph, img) => (
   <ImgCards>
     <div>
       <img src={img} />
@@ -46,14 +46,14 @@ const whatwedo = ({ state }) => {
 
 export default connect(whatwedo);
 
-const CenteredRowContainer = styled(SectionContainer)`
+export const CenteredRowContainer = styled(SectionContainer)`
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 `;
 
-const ImgCards = styled(SectionContainer)`
+export const ImgCards = styled(SectionContainer)`
   display: flex;
   justify-content: center;
   align-items: center;

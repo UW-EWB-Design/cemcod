@@ -16,7 +16,7 @@ const Header = ({ state }) => {
         <HeaderInner>
           <TitleWrapper>
             {/* Heading and Description of the site */}
-            <TitleGroup>
+            <TitleGroup style={{ padding: "0 4rem" }}>
               <img style={{ height: "4rem" }} src={logo}></img>
             </TitleGroup>
 
@@ -55,15 +55,12 @@ const TitleGroup = styled.div`
 `;
 
 const TitleWrapper = styled.div`
-  align-items: center;
   display: flex;
-  padding: 0 4rem;
   text-align: center;
   width: 100%;
 
   @media (min-width: 1000px) {
     width: auto;
-    margin-right: 4rem;
     max-width: 50%;
     padding: 0;
     text-align: left;

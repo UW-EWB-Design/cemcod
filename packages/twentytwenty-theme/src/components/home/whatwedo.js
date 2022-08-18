@@ -8,16 +8,14 @@ const imgCon = (title, paragraph, img) => (
   <ImgCards>
     <div>
       <img src={img} />
-      <span />
-      <h1 style={{ fontSize: "40px", textAlign: "center" }}>{title}</h1>
+      <br></br>
+      <h1 style={{ fontSize: "40px", textAlign: "center", marginTop: 0 }}>{title}</h1>
       <p>{paragraph}</p>
     </div>
   </ImgCards>
 );
 
 const whatwedo = ({ state }) => {
-  const { footerBg } = state.theme.colors;
-
   return (
     <div>
       <CenteredRowContainer style={{ flexDirection: "column" }}>

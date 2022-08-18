@@ -13,36 +13,27 @@ const Header = ({ state }) => {
   return (
     <PageHeader bg={headerBg} id="site-header">
       <HeaderInner>
-        <TitleWrapper>
-          {/* Heading and Description of the site */}
-          <TitleGroup>
-            <img style={{ height: "4rem" }} src={logo}></img>
-          </TitleGroup>
+        <HeaderInner>
+          <TitleWrapper>
+            {/* Heading and Description of the site */}
+            <TitleGroup>
+              <img style={{ height: "4rem" }} src={logo}></img>
+            </TitleGroup>
 
-          {/* Mobile menu button and modal */}
-          <MobileMenuButton />
-          <MobileMenuModal />
-        </TitleWrapper>
+            {/* Mobile menu button and modal */}
+            <MobileMenuButton />
+            <MobileMenuModal />
+          </TitleWrapper>
 
-        <HeaderNavigationWrapper>
-          {/* Desktop navigation links */}
-          <Navigation />
-
-          <div style={{ paddingLeft: "2em" }}>
-            <Button
-              style={{ backgroundColor: "#2BB673" }}
-              size="lg"
-            >
-              GET INVOLVED
-            </Button>
-            <Button
-              style={{ backgroundColor: "#1CA99F" }}
-              size="lg"
-            >
-              DONATE
-            </Button>
-          </div>
-        </HeaderNavigationWrapper>
+          <HeaderNavigationWrapper>
+            {/* Desktop navigation links */}
+            <Navigation />
+          </HeaderNavigationWrapper>
+        </HeaderInner>
+        {
+        // do buttons later
+        //<button style={{ backgroundColor: "#2BB673", height: "100%" }}>GET INVOLVED</button>
+        }
       </HeaderInner>
     </PageHeader>
   );
@@ -52,12 +43,13 @@ const Header = ({ state }) => {
 export default connect(Header);
 
 const TitleGroup = styled.div`
+
   @media (min-width: 1000px) {
     align-items: baseline;
-    display: flex;
+    display: flex;  
     align-content: center;
     flex-wrap: wrap;
-    height: 4rem;
+    height: 5rem;
     justify-content: flex-start;
   }
 `;
@@ -88,8 +80,9 @@ const PageHeader = styled.header`
 const HeaderInner = styled.div`
   align-items: center;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  padding: 0.8rem 0;
+  
   max-width: 168rem;
   z-index: 100;
   margin-left: auto;

@@ -9,7 +9,7 @@ const imgCon = (title, paragraph, img) => (
     <div>
       <img src={img} />
       <span />
-      <h1 style={{ fontSize: "40px" }}>{title}</h1>
+      <h1 style={{ fontSize: "40px", textAlign: "center" }}>{title}</h1>
       <p>{paragraph}</p>
     </div>
   </ImgCards>
@@ -35,6 +35,8 @@ const whatwedo = ({ state }) => {
           legal aid, and human right.
         </p>
       </CenteredRowContainer>
+      <br /><br />
+      
       <CenteredRowContainer style={{ flexDirection: "row" }}>
         {imgCon("MISSION", "To transform vulnerable communities through appropriate and responsible media and community approaches", missionImg)}
         {imgCon("VISION", "To transform vulnerable communities through appropriate and responsible media and community approaches", visionImg)}

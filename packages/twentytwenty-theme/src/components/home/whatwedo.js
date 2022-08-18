@@ -35,7 +35,7 @@ const whatwedo = ({ state }) => {
       </CenteredRowContainer>
       <br /><br />
       
-      <CenteredRowContainer style={{ flexDirection: "row" }}>
+      <CenteredRowContainer style={{ flexDirection: "row", alignItems: "flex-start" }}>
         {imgCon("MISSION", "To transform vulnerable communities through appropriate and responsible media and community approaches.", missionImg)}
         {imgCon("VISION", "An organization that is a benchmark for community transformation.", visionImg)}
         {imgCon("GOAL", "To harmonize media and community efforts for societal development.", goalImg)}

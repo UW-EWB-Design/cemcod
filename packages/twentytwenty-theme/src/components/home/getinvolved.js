@@ -2,7 +2,7 @@ import { styled, connect } from "frontity";
 import EdgeContainer from "../styles/edge-container";
 import involvementImg from "../../imgs/home/involvement.png"
 
-const stayupdatedandinformed = ({ state }) => {
+const getinvolved = ({ state }) => {
   return (
     <OuterContainer>
       <img src={involvementImg} />
@@ -15,7 +15,7 @@ const stayupdatedandinformed = ({ state }) => {
   );
 };
 
-export default connect(stayupdatedandinformed);
+export default connect(getinvolved);
 
 const OuterContainer = styled(EdgeContainer)`
   display: flex;

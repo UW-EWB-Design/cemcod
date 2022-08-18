@@ -1,41 +1,23 @@
 import { styled, connect } from "frontity";
 import Link from "./link";
 import SectionContainer from "./styles/section-container";
-
-// Component that provides scroll to top functionality
-const BackToTop = () => {
-  // scroll to top function
-  const scrollToTop = (event) => {
-    // prevent the default behaviors
-    event.preventDefault();
-    // scroll to the top smoothly
-    scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  };
-
-  return (
-    <a href="#site-header" onClick={scrollToTop} style={{ cursor: "pointer" }}>
-      <span style={{ marginRight: 8 }}>To the top</span>
-      <span className="arrow" aria-hidden="true">
-        ↑
-      </span>
-    </a>
-  );
-};
+import twitterImg from "../imgs/home/twitter.png";
+import fbImg from "../imgs/home/fb.png";
 
 const Footer = ({ state }) => {
-  const currentYear = new Date().getFullYear();
   const { footerBg } = state.theme.colors;
 
   return (
     <SiteFooter bg={footerBg} role="contentinfo">
       <SiteFooterInner>
-        <Credits>
-          <Copyright>
-            &copy; {currentYear}{" "}
-            <Link link={state.frontity.url}>{state.frontity.title}</Link>
-          </Copyright>
-        </Credits>
-        <BackToTop />
+        <CenteredRowContainer style={{ backgroundColor: "#2BB673", flex: "1 1 0" }}>
+          FOLLOW US
+          <Icon src={twitterImg} />
+          <Icon src={fbImg} />
+        </CenteredRowContainer>
+        <CenteredRowContainer style={{ backgroundColor: footerBg, flex: "3 1 0" }}>
+          <span>KEEP UP WITH OUR LIVE EVENTS AND INITIATIVES AT CEMCOD_MEDIA ON YOUTUBE</span>
+        </CenteredRowContainer>
       </SiteFooterInner>
     </SiteFooter>
   );
@@ -43,44 +25,39 @@ const Footer = ({ state }) => {
 
 export default connect(Footer);
 
+const Icon = styled.img`
+  height: 2em;
+`
 const SiteFooterInner = styled(SectionContainer)`
-  align-items: baseline;
+  align-items: basis;
   display: flex;
   justify-content: space-between;
 `;
 
+const CenteredRowContainer = styled.div`
+  justify-content: center;
+  padding: 0.5em 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+`;
+
+
 const SiteFooter = styled.footer`
-  margin-top: 5rem;
+  margin-top: 0;
   border-color: #dcd7ca;
   border-style: solid;
   border-width: 0;
-  padding: 3rem 0;
+  width: 100%;
   background-color: ${(props) => props.bg};
-  color: #000000;
 
   @media (min-width: 700px) {
-    margin-top: 8rem;
     font-size: 1.8rem;
-    padding: 4.3rem 0;
   }
 
   a {
     color: inherit;
     text-decoration: none;
-  }
-`;
-
-const Credits = styled.div`
-  @media (min-width: 700px) {
-    display: flex;
-  }
-`;
-
-const Copyright = styled.p`
-  font-weight: 600;
-  margin: 0;
-
-  @media (min-width: 700px) {
-    font-weight: 700;
   }
 `;

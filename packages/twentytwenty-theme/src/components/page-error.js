@@ -1,5 +1,4 @@
 import { styled, connect } from "frontity";
-import SearchForm from "./search/search-form";
 import SectionContainer from "./styles/section-container";
 
 const description404 = (
@@ -28,7 +27,6 @@ const ErrorPage = ({ state }) => {
     <Container size="thin">
       <EntryTitle>{data.is404 ? title404 : title}</EntryTitle>
       <IntroText>{data.is404 ? description404 : description}</IntroText>
-      <SearchForm />
     </Container>
   );
 };

@@ -13,7 +13,8 @@ const empowerthecommunity = () => {
 
 export default connect(empowerthecommunity);
 
-const CenteredColumnContainer = styled(EdgeContainer)`
+const CenteredColumnContainer = styled.div`
+  margin: 3rem 0; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,9 +22,6 @@ const CenteredColumnContainer = styled(EdgeContainer)`
   text-align: center;
   background-image: url(${empowerImg});
   background-size: cover;
-  width: auto;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
 
   button {
     margin-bottom: 4rem;

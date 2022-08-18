@@ -11,7 +11,6 @@ import Values from "./home/values";
 import Archive from "./archive";
 import Loading from "./loading";
 import Post from "./post";
-import SearchResults from "./search/search-results";
 import SkipLink from "./styles/skip-link";
 import MetaTitle from "./page-meta-title";
 import PageError from "./page-error";

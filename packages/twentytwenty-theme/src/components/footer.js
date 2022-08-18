@@ -10,7 +10,7 @@ const Footer = ({ state }) => {
   return (
     <SiteFooter bg={footerBg} role="contentinfo">
       <SiteFooterInner>
-        <CenteredRowContainer style={{ backgroundColor: "#2BB673", flex: "1 1 0" }}>
+        <CenteredRowContainer style={{ backgroundColor: "#2BB673", flex: "1 1 0", color: "white" }}>
           FOLLOW US
           <Icon src={twitterImg} />
           <Icon src={fbImg} />

@@ -12,11 +12,11 @@ const getMaxWidth = (props) => maxWidths[props.size] || maxWidths["medium"];
 const SectionContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
-  width: calc(100% - 4rem);
+  width: calc(100% - 2rem);
   max-width: ${getMaxWidth};
 
-  @media (min-width: 700px) {
-    width: calc(100% - 8rem);
+  @media (min-width: 1000px) {
+    width: calc(100% - 4rem);
   }
 `;
 

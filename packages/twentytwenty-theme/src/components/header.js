@@ -1,11 +1,10 @@
 import { connect, styled } from "frontity";
 import Link from "./link";
 import Navigation from "./navigation/navigation";
-import SearchButton from "./search/search-button";
-import SearchModal from "./search/search-modal";
 import MobileSearchButton from "./mobile/search-button";
 import MobileMenuButton from "./mobile/menu-button";
 import MobileMenuModal from "./mobile/menu-modal";
+import logo from "../imgs/navbar/cemcodLogo.png"
 
 const Header = ({ state }) => {
   const { title, description } = state.frontity;
@@ -14,32 +13,28 @@ const Header = ({ state }) => {
   return (
     <PageHeader bg={headerBg} id="site-header">
       <HeaderInner>
-        <TitleWrapper>
-          {/* Search button on mobile */}
-          {state.theme.showSearchInHeader && <MobileSearchButton />}
+        <HeaderInner>
+          <TitleWrapper>
+            {/* Heading and Description of the site */}
+            <TitleGroup style={{ padding: "0 4rem" }}>
+              <img style={{ height: "4rem" }} src={logo}></img>
+            </TitleGroup>
 
-          {/* Heading and Description of the site */}
-          <TitleGroup>
-            <SiteTitle>
-              <StyledLink link="/">{title}</StyledLink>
-            </SiteTitle>
-            <SiteDescription>{description}</SiteDescription>
-          </TitleGroup>
+            {/* Mobile menu button and modal */}
+            <MobileMenuButton />
+            <MobileMenuModal />
+          </TitleWrapper>
 
-          {/* Mobile menu button and modal */}
-          <MobileMenuButton />
-          <MobileMenuModal />
-        </TitleWrapper>
-
-        <HeaderNavigationWrapper>
-          {/* Desktop navigation links */}
-          <Navigation />
-          {/* Desktop search button */}
-          {state.theme.showSearchInHeader && <SearchButton />}
-        </HeaderNavigationWrapper>
+          <HeaderNavigationWrapper>
+            {/* Desktop navigation links */}
+            <Navigation />
+          </HeaderNavigationWrapper>
+        </HeaderInner>
+        {
+        // do buttons later
+        //<button style={{ backgroundColor: "#2BB673", height: "100%" }}>GET INVOLVED</button>
+        }
       </HeaderInner>
-      {/* Global search modal */}
-      <SearchModal />
     </PageHeader>
   );
 };
@@ -48,26 +43,24 @@ const Header = ({ state }) => {
 export default connect(Header);
 
 const TitleGroup = styled.div`
+
   @media (min-width: 1000px) {
     align-items: baseline;
-    display: flex;
+    display: flex;  
+    align-content: center;
     flex-wrap: wrap;
+    height: 5rem;
     justify-content: flex-start;
-    margin: -1rem 0 0 -2.4rem;
   }
 `;
 
 const TitleWrapper = styled.div`
-  align-items: center;
   display: flex;
-  justify-content: center;
-  padding: 0 4rem;
   text-align: center;
   width: 100%;
 
   @media (min-width: 1000px) {
     width: auto;
-    margin-right: 4rem;
     max-width: 50%;
     padding: 0;
     text-align: left;
@@ -78,13 +71,15 @@ const PageHeader = styled.header`
   z-index: 1;
   background: ${(props) => props.bg};
   position: relative;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 `;
 
 const HeaderInner = styled.div`
   align-items: center;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  padding: 2.8rem 0;
+  
   max-width: 168rem;
   z-index: 100;
   margin-left: auto;

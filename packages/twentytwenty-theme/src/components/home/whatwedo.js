@@ -8,22 +8,20 @@ export const imgCon = (title, paragraph, img) => (
   <ImgCards>
     <div>
       <img src={img} />
-      <span />
-      <h1 style={{ fontSize: "40px" }}>{title}</h1>
+      <br></br>
+      <h1 style={{ fontSize: "40px", textAlign: "center", marginTop: 0 }}>{title}</h1>
       <p>{paragraph}</p>
     </div>
   </ImgCards>
 );
 
 const whatwedo = ({ state }) => {
-  const { footerBg } = state.theme.colors;
-
   return (
     <div>
       <CenteredRowContainer style={{ flexDirection: "column" }}>
         <h1>WHAT WE DO</h1>
         <p>
-          Center for Media Literacy and Community Developmetn (CEMCOD) is a
+          Center for Media Literacy and Community Development (CEMCOD) is a
           non-profit organization with a focus to bring about holistic growth and
           development by uplifting the status of vulnerable communities within
           Uganda through the provision of media, media-related, and direct
@@ -35,10 +33,12 @@ const whatwedo = ({ state }) => {
           legal aid, and human right.
         </p>
       </CenteredRowContainer>
-      <CenteredRowContainer style={{ flexDirection: "row" }}>
-        {imgCon("MISSION", "To transform vulnerable communities through appropriate and responsible media and community approaches", missionImg)}
-        {imgCon("VISION", "To transform vulnerable communities through appropriate and responsible media and community approaches", visionImg)}
-        {imgCon("GOAL", "To transform vulnerable communities through appropriate and responsible media and community approaches", goalImg)}
+      <br /><br />
+      
+      <CenteredRowContainer style={{ flexDirection: "row", alignItems: "flex-start" }}>
+        {imgCon("MISSION", "To transform vulnerable communities through appropriate and responsible media and community approaches.", missionImg)}
+        {imgCon("VISION", "An organization that is a benchmark for community transformation.", visionImg)}
+        {imgCon("GOAL", "To harmonize media and community efforts for societal development.", goalImg)}
       </CenteredRowContainer>
     </div>
   );
@@ -51,6 +51,7 @@ const CenteredRowContainer = styled(SectionContainer)`
   justify-content: center;
   align-items: center;
   gap: 20px;
+  text-align: center;
 `;
 
 const ImgCards = styled(SectionContainer)`

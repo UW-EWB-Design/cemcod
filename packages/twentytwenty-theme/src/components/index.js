@@ -5,10 +5,12 @@ import globalStyles from "./styles/global-styles";
 import FontFaces from "./styles/font-faces";
 import Header from "./header";
 import Whatwedo from "./home/whatwedo";
+import Getinvolved from "./home/getinvolved";
+import Empowerthecommunity from "./home/empowerthecommunity";
+import Values from "./home/values";
 import Archive from "./archive";
 import Loading from "./loading";
 import Post from "./post";
-import SearchResults from "./search/search-results";
 import SkipLink from "./styles/skip-link";
 import MetaTitle from "./page-meta-title";
 import PageError from "./page-error";
@@ -38,7 +40,10 @@ const Theme = ({ state }) => {
       <div style={{ minHeight: "calc(100vh - 190px)" }}>
         {/* Add the header of the site. */}
         <Header />
+        <Getinvolved />
         <Whatwedo />
+        <Empowerthecommunity />
+        <Values />
         
         {/* Add the main section. It renders a different component depending
         on the type of URL we are in. */}

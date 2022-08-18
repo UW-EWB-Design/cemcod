@@ -2,7 +2,7 @@ const settings = {
   "name": "here",
   "state": {
     "frontity": {
-      "url": "https://test.frontity.org",
+      "url": "https://test.frontity.org", // change this later when wordpress connected
       "title": "CEMCOD"
     }
   },

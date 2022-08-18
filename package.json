@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "frontity dev",
-    "build": "frontity build",
+    "build": "frontity build --output public",
     "serve": "frontity serve",
     "start": "frontity dev"
   },

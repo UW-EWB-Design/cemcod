@@ -51,8 +51,6 @@ const SiteFooter = styled.footer`
   border-width: 0;
   width: 100%;
   background-color: ${(props) => props.bg};
-  position: fixed;
-  bottom: 0;
 
   @media (min-width: 700px) {
     font-size: 1.8rem;

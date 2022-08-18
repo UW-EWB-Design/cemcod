@@ -23,7 +23,7 @@ const OuterContainer = styled(EdgeContainer)`
   align-items: center;
   flex-direction: row;
   column-gap: 2.5rem;
-  
+
   @media (max-width: 780px) {
     flex-direction: column;
     width: auto;
@@ -35,6 +35,9 @@ const TextContainer = styled(EdgeContainer)`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  h2 {
+    margin: 0;
+  }
   button {
     border-color: #2bb673;
     border-style: solid;

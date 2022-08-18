@@ -51,6 +51,7 @@ const CenteredRowContainer = styled(SectionContainer)`
   justify-content: center;
   align-items: center;
   gap: 20px;
+  text-align: center;
 `;
 
 const ImgCards = styled(SectionContainer)`

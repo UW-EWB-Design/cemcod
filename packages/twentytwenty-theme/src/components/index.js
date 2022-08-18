@@ -6,6 +6,8 @@ import FontFaces from "./styles/font-faces";
 import Header from "./header";
 import Whatwedo from "./home/whatwedo";
 import Getinvolved from "./home/getinvolved";
+import Empowerthecommunity from "./home/empowerthecommunity";
+import Values from "./home/values";
 import Archive from "./archive";
 import Loading from "./loading";
 import Post from "./post";
@@ -40,6 +42,8 @@ const Theme = ({ state }) => {
         <Header />
         <Getinvolved />
         <Whatwedo />
+        <Empowerthecommunity />
+        <Values />
         
         {/* Add the main section. It renders a different component depending
         on the type of URL we are in. */}

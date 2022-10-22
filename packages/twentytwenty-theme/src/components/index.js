@@ -4,16 +4,14 @@ import Footer from "./footer";
 import globalStyles from "./styles/global-styles";
 import FontFaces from "./styles/font-faces";
 import Header from "./header";
-import Whatwedo from "./home/whatwedo";
-import Getinvolved from "./home/getinvolved";
-import Empowerthecommunity from "./home/empowerthecommunity";
-import Values from "./home/values";
 import Archive from "./archive";
 import Loading from "./loading";
 import Post from "./post";
 import SkipLink from "./styles/skip-link";
 import MetaTitle from "./page-meta-title";
 import PageError from "./page-error";
+import Home from "./home/home";
+import Projects from "./projects/projects";
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -22,7 +20,7 @@ import PageError from "./page-error";
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
-
+  console.log("data", data);
   return (
     <>
       {/* Add global styles for the whole site, like body or a's or font-faces. 
@@ -40,21 +38,19 @@ const Theme = ({ state }) => {
       <div style={{ minHeight: "calc(100vh - 190px)" }}>
         {/* Add the header of the site. */}
         <Header />
-        <Getinvolved />
-        <Whatwedo />
-        <Empowerthecommunity />
-        <Values />
-        
         {/* Add the main section. It renders a different component depending
         on the type of URL we are in. */}
         <Main id="main">
           <Switch>
-
+            <Loading when={data.isFetching} />
+            <Home when={data.isHome}/> 
+            <Projects when={data.route === "/projects/"} />
+            <PageError when={data.isError} />
           </Switch>
         </Main>
+        <Footer />
       </div>
 
-      <Footer />
     </>
   );
 };

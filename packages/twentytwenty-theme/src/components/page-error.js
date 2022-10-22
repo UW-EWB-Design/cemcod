@@ -4,7 +4,9 @@ import SectionContainer from "./styles/section-container";
 const description404 = (
   <>
     The page you were looking for could not be found. It might have been
-    removed, renamed, or did not exist in the first place. Search for:
+    removed, renamed, or did not exist in the first place. 
+    <br />
+    <br />
   </>
 );
 

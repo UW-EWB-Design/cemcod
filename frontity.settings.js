@@ -18,15 +18,19 @@ const settings = {
             ],
             [
               "Our Work",
-              "/our-work"
+              "/our-work/"
+            ],
+            [
+              "Projects",
+              "/projects/"
             ],
             [
               "News & Updates",
-              "/news"
+              "/news/"
             ],
             [
               "Success Stories",
-              "/stories"
+              "/stories/"
             ],
             [
               "About Us",
@@ -44,7 +48,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://test.frontity.org"
+          "url": "https://test.frontity.org",
         }
       }
     },

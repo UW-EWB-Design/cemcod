@@ -12,6 +12,9 @@ import MetaTitle from "./page-meta-title";
 import PageError from "./page-error";
 import Home from "./home/home";
 import Projects from "./projects/projects";
+import OurWork from "./our-work/our-work";
+import NewsAndUpdates from "./news-and-updates/news-and-updates";
+import SuccessStories from "./success-stories/success-stories";
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -44,7 +47,10 @@ const Theme = ({ state }) => {
           <Switch>
             <Loading when={data.isFetching} />
             <Home when={data.isHome}/> 
+            <OurWork when={data.route === "/our-work/"} />
             <Projects when={data.route === "/projects/"} />
+            <NewsAndUpdates when={data.route === "/news/"} />
+            <SuccessStories when={data.route === "/stories/"} />
             <PageError when={data.isError} />
           </Switch>
         </Main>

@@ -35,7 +35,7 @@ const settings = {
             [
               "About Us",
               "/about-us/"
-            ]
+            ],
           ],
           "featured": {
             "showOnList": false,

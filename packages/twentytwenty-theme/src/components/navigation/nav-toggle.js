@@ -32,7 +32,8 @@ export const BaseToggle = styled.button`
     padding: 0 4rem;
   }
 
-  @media (min-width: 1000px) {
+  /* changed width from 1000px */
+  @media (min-width: 1047px) {
     height: 4.4rem;
     padding: 0 3rem;
     position: relative;
@@ -115,7 +116,8 @@ export const ToggleInner = styled.span`
   position: relative;
   bottom: 0.5rem;
 
-  @media (min-width: 1000px) {
+  /* changed width from 1000px */
+  @media (min-width: 1047px) {
     position: static;
   }
 
@@ -143,7 +145,8 @@ export const ToggleText = styled.span`
     font-size: 1.2rem;
   }
 
-  @media (min-width: 1000px) {
+  /* Changed width from 1000px */
+  @media (min-width: 1047px) {
     left: 0;
     right: 0;
     text-align: center;
@@ -154,7 +157,9 @@ export const ToggleText = styled.span`
 
 // This wraps each toggle button
 export const ToggleWrapper = styled.div`
-  @media (min-width: 1000px) {
+
+  /* Changed width from 1000px */
+  @media (min-width: 1047px) {
     position: relative;
   }
 

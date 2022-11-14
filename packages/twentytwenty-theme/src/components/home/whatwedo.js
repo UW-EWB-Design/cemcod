@@ -52,6 +52,14 @@ const CenteredRowContainer = styled(SectionContainer)`
   align-items: center;
   gap: 20px;
   text-align: center;
+
+  img{
+    display: inline !important;
+  }
+
+  @media(max-width: 560px){
+    flex-wrap: wrap;
+  }
 `;
 
 const ImgCards = styled(SectionContainer)`
@@ -59,4 +67,5 @@ const ImgCards = styled(SectionContainer)`
   justify-content: center;
   align-items: center;
   gap: 20px;
+
 `;

@@ -32,7 +32,7 @@ const Header = ({ state }) => {
         </HeaderInner>
         {
         // do buttons later
-        //<button style={{ backgroundColor: "#2BB673", height: "100%" }}>GET INVOLVED</button>
+        //<button style={{ backgroundColor: "#2BB673", height: "100%"}}>GET INVOLVED</button>
         }
       </HeaderInner>
     </PageHeader>

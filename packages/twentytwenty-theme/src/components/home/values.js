@@ -38,6 +38,10 @@ const CenteredRowContainer = styled(SectionContainer)`
   align-items: flex-start;
   gap: 2.4rem;
   text-align: center;
+
+  @media(max-width: 1040px){
+    flex-wrap: wrap;
+  }
 `;
 
 const ValueCards = styled(SectionContainer)`
@@ -50,4 +54,9 @@ const ValueCards = styled(SectionContainer)`
   h2 {
     margin: 1rem 0 1rem;
   }
+
+  @media (min-width:470px){
+    width:40%;
+  }
+
 `;

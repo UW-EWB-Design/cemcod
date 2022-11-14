@@ -39,7 +39,9 @@ const NavWrapper = styled.div`
 
 const MenuNav = styled.nav`
   display: none;
-  @media (min-width: 1000px) {
+
+  /* Changed width from 1000px to 1047px */
+  @media (min-width: 1047px) {
     display: block;
     width: 100%;
   }

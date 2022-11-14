@@ -24,9 +24,12 @@ const OuterContainer = styled(EdgeContainer)`
   flex-direction: row;
   column-gap: 2.5rem;
 
-  @media (max-width: 780px) {
+  @media (max-width: 1078px) {
     flex-direction: column;
     width: auto;
+    img{
+      width:100%;
+    }
   }
   
 `;
@@ -55,7 +58,15 @@ const TextContainer = styled(EdgeContainer)`
     background-color: #e3e6e4;
   }
 
-  @media (max-width: 780px) {
+  @media (max-width: 1078px) {
     align-items: center;
+    h2{
+      margin-top: 20px;
+    }
+    button{
+      text-align: center;
+      white-space: nowrap;
+      padding: 1rem;
+    }
   }
 `;

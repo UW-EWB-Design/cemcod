@@ -21,6 +21,10 @@ const settings = {
               "/our-work/"
             ],
             [
+              "Programs",
+              "/programs/"
+            ],
+            [
               "Projects",
               "/projects/"
             ],
